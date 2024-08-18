@@ -10,6 +10,7 @@
 body{
     font-family: Montserrat;
 }
+/*navigation*/
 nav{
     display: flex;
     background-color: #1C2533;
@@ -18,6 +19,9 @@ nav{
     justify-content: space-between;
     padding: 0px 50px 0px 70px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .logo{
     font-size: 25px;
@@ -56,6 +60,10 @@ nav ul li a:hover , nav ul li a.active{
 /*responsive nav*/
 
 @media (max-width:800px){
+    nav{
+        position: sticky;
+        top: 0;
+    }
     nav ul{
         position: fixed;
         top: 80px;
@@ -86,5 +94,172 @@ nav ul li a:hover , nav ul li a.active{
     }
     #click:checked ~ .menu i::before{
         content: "\f00d";
+    }
+}
+
+/*header searcharea*/
+header{
+    background-image: url('image/pc10.jpg');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.searcharea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 200px;
+}
+.searcharea input{
+    padding: 8px 35px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.searcharea input:hover{
+    border-color: yellow;
+    background-color: black;
+}
+.searcharea .icon{
+    margin-left: -30px;
+}
+.searcharea i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:800px){
+    header{
+        height: 250px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+    }
+    .searcharea input{
+        padding: 6px 25px;
+        border-radius: 15px;
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    
+    }
+    .searcharea .icon{
+        padding: 0px 5px;
+    }
+    .searcharea i{
+        font-size: 16px;
+    }
+}
+.section1{
+    background: #0e1645;
+    padding-bottom: 25px;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 20px 0px;
+}
+#service{
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.sr{
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 3px solid black;
+    transition: 0.5s;
+}
+.sr i{
+    font-size: 25px;
+}
+.sr p{
+    margin-top: 10px;
+}
+.sr:hover{
+    box-shadow:5px 5px 5px 5px gray ;
+    transform: scale(1.1);
+}
+@media (min-width:689px) and (max-width:1099px){
+    #service{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 25px;
+    }
+}
+@media(max-width:688px){
+    #service{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+    }
+}
+
+.section2{
+    background-color: #062e3a;
+}
+.section2 #parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+}
+.section2 .image img{
+    height: 400px;
+    margin-right: 100px;
+}
+.section2 .text{
+    color: white;
+}
+.section2 .text h2{
+    margin: 20px 0px;
+    font-size: 30px;
+
+}
+.section2 .text a{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 25px;
+    transition: 0.5s;
+}
+.section2 .text a:hover{
+    color: crimson;
+    transform: scale(0.8);
+}
+@media(max-width:1099px){
+    .section2 #parent{
+        flex-direction: column;
+        margin: auto;
+    }
+    .section2 .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 140px;
+    }
+    .section2 .text{
+        margin: 20px 0px;
     }
 }
