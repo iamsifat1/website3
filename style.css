@@ -57,46 +57,6 @@ nav ul li a:hover , nav ul li a.active{
     cursor: pointer;
     display: none;
 }
-/*responsive nav*/
-
-@media (max-width:800px){
-    nav{
-        position: sticky;
-        top: 0;
-    }
-    nav ul{
-        position: fixed;
-        top: 80px;
-        background-color: #17202A;
-        height: 90vh;
-        width: 60%;
-        right: -100%;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 30px;
-        transition: all 0.5s;
-    }
-    nav ul li{
-        margin: 40px 0px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    nav ul li a:hover , nav ul li a.active{
-        background: none;
-        color: crimson;
-    }
-    .menu{
-        display: block;
-    }
-    #click:checked ~ul{
-        right: 0%;
-    }
-    #click:checked ~ .menu i::before{
-        content: "\f00d";
-    }
-}
-
 /*header searcharea*/
 header{
     background-image: url('image/pc10.jpg');
@@ -135,29 +95,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-@media (max-width:800px){
-    header{
-        height: 250px;
-        width: 100%;
-        background-position: center center;
-        background-size: cover;
-    }
-    .searcharea input{
-        padding: 6px 25px;
-        border-radius: 15px;
-        background-color: transparent;
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-    
-    }
-    .searcharea .icon{
-        padding: 0px 5px;
-    }
-    .searcharea i{
-        font-size: 16px;
-    }
-}
 .section1{
     background: #0e1645;
     padding-bottom: 25px;
@@ -193,24 +130,6 @@ h1{
 .sr:hover{
     box-shadow:5px 5px 5px 5px gray ;
     transform: scale(1.1);
-}
-@media (min-width:689px) and (max-width:1099px){
-    #service{
-        width: 90%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 25px;
-    }
-}
-@media(max-width:688px){
-    #service{
-        width: 90%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 20px;
-    }
 }
 
 .section2{
@@ -248,7 +167,66 @@ h1{
     color: crimson;
     transform: scale(0.8);
 }
-@media(max-width:1099px){
+
+
+@media (max-width:885px){
+    nav{
+        position: sticky;
+        top: 0;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        background-color: #17202A;
+        height: 90vh;
+        width:100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        margin: 40px 0px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul li a:hover , nav ul li a.active{
+        background: none;
+        color: crimson;
+    }
+    .menu{
+        display: block;
+    }
+    #click:checked ~ul{
+        display: block;
+    }
+    #click:checked ~ .menu i::before{
+        content: "\f00d";
+    }
+
+    header{
+        height: 250px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+    }
+    .searcharea input{
+        padding: 6px 25px;
+        border-radius: 15px;
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    
+    }
+    .searcharea .icon{
+        padding: 0px 5px;
+    }
+    .searcharea i{
+        font-size: 16px;
+    }
     .section2 #parent{
         flex-direction: column;
         margin: auto;
@@ -259,7 +237,30 @@ h1{
         align-items: center;
         margin-left: 140px;
     }
+    .section2 .image img{
+        height: 300px;
+    }
     .section2 .text{
         margin: 20px 0px;
+    }
+}
+
+
+@media (min-width:689px) and (max-width:1099px){
+    #service{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 25px;
+    }
+}
+@media(max-width:688px){
+    #service{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
     }
 }
