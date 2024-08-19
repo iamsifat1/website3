@@ -131,8 +131,50 @@ h1{
     box-shadow:5px 5px 5px 5px gray ;
     transform: scale(1.1);
 }
-
-
+#second-section{
+    background-color: #1B4F72;
+    padding: 100px 200px;
+}
+#second-section .title{
+    font-size: 30px;
+    color: yellow;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#smart-parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    width: 100%;
+}
+#smart-parent .image{
+    width: 100%;
+}
+#smart-parent .image img{
+    height: 400px;
+}
+#smart-parent .text{
+    color: white;
+    margin: 0px 100px;
+    
+}
+#smart-parent .text h2{
+    font: size 35px;
+    margin: 20px 0px;
+}
+#smart-parent .text a{
+    text-decoration: none;
+    background: #ffffff;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 15px;
+}
+#smart-parent .text a:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 
 @media (max-width:885px){
     nav{
@@ -198,5 +240,30 @@ h1{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 20px;
+    }
+    #second-section{
+        padding: 50px;
+    }
+    #smart-parent{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #smart-parent .image{
+        width: 100%;
+    }
+    #smart-parent .image img{
+        height: 300px;
+    }
+    #smart-parent .text{
+        color: white;
+        margin:50px;
+        
+    }
+    #smart-parent .text h2{
+        font: size 35px;
+        margin: 20px 0px;
     }
 }
