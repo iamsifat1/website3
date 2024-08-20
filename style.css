@@ -175,6 +175,50 @@ h1{
     transform: scale(1.1);
     transition: 0.5s;
 }
+#section3{
+    background-color: #6f1bc4;
+}
+#section3 .about-parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 25px;
+    margin: 0px 100px;
+    padding: 100px 0;
+    align-items: center;
+}
+#section3 .text{
+    color: white;
+}
+#section3 .text h3{
+    margin: 20px 0px;
+    font-size: 25px;
+}
+#section3 .text ul{
+    margin: 20px 0;
+}
+#section3 .text a{
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: yellow;
+    border-radius: 12px;
+}
+#section3 .item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 25px;
+}
+#section3 .item div{
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 3px solid black;
+}
+#section3 .item div h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
 @media (max-width:885px){
     nav{
@@ -265,5 +309,21 @@ h1{
     #smart-parent .text h2{
         font: size 35px;
         margin: 20px 0px;
+    }
+    #section3 .about-parent{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        margin: 0px 50px;
+        padding: 50px 0;
+        align-items: center;
+    }
+    #section3 .item{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 25px;
+    }
+    #section3 .item div{
+        width: 95%;
     }
 }
