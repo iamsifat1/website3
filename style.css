@@ -331,6 +331,37 @@ h1{
 #section6 .d1{
     padding: 20px 15px;
 }
+footer{
+    background-color: #5b2a9f;
+}
+.ft{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 45px;
+    margin: 0 100px;
+    padding: 70px 0;
+    color: white;
+}
+.ft h4{
+    color: yellow;
+    margin-bottom: 15px;
+}
+
+.ft div a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.ft ul{
+    display: flex;
+}
+.ft ul li{
+    list-style-type: none;
+    font-size: 25px;
+    margin-right: 15px;
+}
 @media (max-width:885px){
     nav{
         position: sticky;
@@ -484,5 +515,20 @@ h1{
     #section6 fieldset i{
         font-size: 25px;
         padding: 0 10px 10px 10px;
+    }
+    .ft{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 45px;
+        margin: 0 50px;
+        padding: 50px 0;
+    }
+    
+    .ft div a{
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        margin-bottom: 15px;
+        font-weight: bold;
     }
 }
